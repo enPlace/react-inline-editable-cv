@@ -14,11 +14,12 @@ const PersonalInfo = () => {
         email: "email",
         linkedIn: "LinkedIn"
     })
+ 
     return ( 
         <div className="personal-info">
-            <Name></Name>
-            <Role></Role>
-            <Contact></Contact>
+            <Name firstName = {persInfo.firstName} lastName = {persInfo.lastName}></Name>
+            <Role persInfo = {persInfo}></Role>
+            <Contact persInfo = {persInfo}></Contact>
         </div>
      );
 }

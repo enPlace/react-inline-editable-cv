@@ -1,7 +1,8 @@
-const Role = () => {
+const Role = ({persInfo}) => {
     return ( 
-        <div className="role"></div>
-     );
+        <div className="role">{persInfo.role}</div>
+    )
+
 }
  
 export default Role;

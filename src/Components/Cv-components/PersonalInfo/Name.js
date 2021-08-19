@@ -1,6 +1,9 @@
-const Name = () => {
+const Name = ({firstName, lastName}) => {
     return ( 
-        <div className="name"></div>
+        <div className="name">
+            <h1>{firstName}</h1>
+            <h1>{lastName}</h1>
+        </div>
      );
 }
  
