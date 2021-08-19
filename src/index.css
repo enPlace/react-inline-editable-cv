@@ -11,6 +11,11 @@ body {
   align-items: center;
 
 }
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -21,6 +26,18 @@ code {
   flex-direction: column;
   align-items: center;
 }
+.main-header h1{
+  margin:10px;
+}
 #main-icon{
   width: 80px;
+}
+.cv-body{
+  border:2px solid black;
+  width: 80vw;
+  min-height: 80vh;
+}
+.personal-info{
+  border-bottom: 1px solid gray;
+  height: 150px;
 }
