@@ -5,15 +5,6 @@ import EmailIcon from "./email2.svg";
 import LinkedIcon from "./linkedin.svg";
 
 const Contact = ({ handleEditChange, isEditable}) => {
-  /* for each of the items in contactInfo, I need to: 
-    1. check to see if it is editable or not. 
-    2. if !editable, display normal div. 
-         2a. Normal div should have: git
-          - a function that says, onClick, set this thing to editable. 
-          - a name that matches the id
-          - a key that matches the id 
-          
-*/
   const [contactInfo, setContactInfo] = useState([
     { text: "address 1", icon: LocationIcon, pos: 0, id: "address1" },
     { text: "address 2", icon: LocationIcon, pos: 1, id: "address2" },

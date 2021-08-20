@@ -7,13 +7,12 @@ const PersonalInfo = () => {
   const [isEditable, setIsEditable] = useState(false);
   const [persInfo, setPersInfo] = useState([
     {
- 
       role: "Current Role",
     },
   ]);
 
   const handleEditChange = (id) => {
-    if (id&&isEditable !== id) {
+    if (id && isEditable !== id) {
       setIsEditable(id);
     } else {
       setIsEditable(false);
@@ -29,13 +28,9 @@ const PersonalInfo = () => {
   };
 
   return (
-    <div className="personal-info" >
-      <Name
-      isEditable = {isEditable}
-      handleEditChange = {handleEditChange}
-      ></Name>
-      <Role isEditable ={isEditable}
-      handleEditChange = {handleEditChange}></Role>
+    <div className="personal-info">
+      <Name isEditable={isEditable} handleEditChange={handleEditChange}></Name>
+      <Role isEditable={isEditable} handleEditChange={handleEditChange}></Role>
       <Contact
         persInfo={persInfo}
         isEditable={isEditable}

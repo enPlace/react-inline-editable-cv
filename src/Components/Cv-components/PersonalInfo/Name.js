@@ -8,8 +8,8 @@ const Name = ({ isEditable, handleEditChange }) => {
   const handleChange = (e) => {
     const targ = e.target;
     const obj2 = [...names];
-    obj2[targ.id].text = targ.value
-    setNames(obj2)
+    obj2[targ.id].text = targ.value;
+    setNames(obj2);
   };
 
   return (
@@ -27,11 +27,19 @@ const Name = ({ isEditable, handleEditChange }) => {
           );
         } else {
           return (
-            <form action="" key = {name.id}>
+            <form
+              className= "nameForm"
+              action=""
+              key={name.id}
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleEditChange();
+              }}
+            >
               <input
                 type="text"
                 value={name.text}
-                id = {name.pos}
+                id={name.pos}
                 name={name.id}
                 onChange={(e) => handleChange(e)}
               />

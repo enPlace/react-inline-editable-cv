@@ -39,8 +39,34 @@ code {
 }
 .personal-info{
   border-bottom: 1px solid gray;
-  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
+.nameForm input{
+  font-size: 30px;
+  font-weight: bold;
+  max-width: 166px;
+  height: 40px;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contactItem{
+  display:flex;
+  width: 150px;
+  text-align: right;
+}
+.contactItem form{
+  text-align: right;
+}
+.contactItemName{
+  width: 100%;
+}
+
 .contactItem img{
   width: 20px;
+  margin-left: 10px;
 }
