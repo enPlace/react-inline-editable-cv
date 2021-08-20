@@ -7,8 +7,7 @@ const PersonalInfo = () => {
   const [isEditable, setIsEditable] = useState(false);
   const [persInfo, setPersInfo] = useState([
     {
-      firstName: "First Name",
-      lastName: "Last Name",
+ 
       role: "Current Role",
     },
   ]);
@@ -32,8 +31,8 @@ const PersonalInfo = () => {
   return (
     <div className="personal-info" >
       <Name
-        firstName={persInfo[0].firstName}
-        lastName={persInfo[0].lastName}
+      isEditable = {isEditable}
+      handleEditChange = {handleEditChange}
       ></Name>
       <Role persInfo={persInfo}></Role>
       <Contact
