@@ -8,7 +8,7 @@ const Contact = ({ handleEditChange, isEditable}) => {
   /* for each of the items in contactInfo, I need to: 
     1. check to see if it is editable or not. 
     2. if !editable, display normal div. 
-         2a. Normal div should have: 
+         2a. Normal div should have: git
           - a function that says, onClick, set this thing to editable. 
           - a name that matches the id
           - a key that matches the id 
@@ -63,6 +63,7 @@ const Contact = ({ handleEditChange, isEditable}) => {
                   type="text"
                   value={item.text}
                   onChange={handleChange}
+                  onClick = {(e)=>e.target.select()}
                 />
               </form>
               <img src={item.icon} alt="" />

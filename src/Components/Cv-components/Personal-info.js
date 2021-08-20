@@ -3,7 +3,6 @@ import Name from "./PersonalInfo/Name";
 import Role from "./PersonalInfo/Role";
 import Contact from "./PersonalInfo/Contact";
 
-
 const PersonalInfo = () => {
   const [isEditable, setIsEditable] = useState(false);
   const [persInfo, setPersInfo] = useState([
@@ -11,25 +10,27 @@ const PersonalInfo = () => {
       firstName: "First Name",
       lastName: "Last Name",
       role: "Current Role",
-
     },
   ]);
 
   const handleEditChange = (id) => {
-    return !isEditable ? setIsEditable(id) : false;
+    if (id&&isEditable !== id) {
+      setIsEditable(id);
+    } else {
+      setIsEditable(false);
+    }
   };
   const handleChange = (e) => {
-
-    let newState = persInfo
-    console.log(newState)
+    let newState = persInfo;
+    console.log(newState);
     newState[0][e.target.name].content = e.target.value;
-    console.log(newState)
-    setPersInfo(newState)
-    console.log(persInfo)
+    console.log(newState);
+    setPersInfo(newState);
+    console.log(persInfo);
   };
 
   return (
-    <div className="personal-info">
+    <div className="personal-info" >
       <Name
         firstName={persInfo[0].firstName}
         lastName={persInfo[0].lastName}
