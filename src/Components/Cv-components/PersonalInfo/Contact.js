@@ -50,7 +50,7 @@ const Contact = ({ handleEditChange, isEditable}) => {
           );
         } else {
           return (
-            <div className="contactItem">
+            <div key = {item.id} className="contactItem">
               <form
                 action=""
                 onSubmit={(e) => {
