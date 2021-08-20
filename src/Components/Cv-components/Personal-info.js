@@ -34,7 +34,8 @@ const PersonalInfo = () => {
       isEditable = {isEditable}
       handleEditChange = {handleEditChange}
       ></Name>
-      <Role persInfo={persInfo}></Role>
+      <Role isEditable ={isEditable}
+      handleEditChange = {handleEditChange}></Role>
       <Contact
         persInfo={persInfo}
         isEditable={isEditable}

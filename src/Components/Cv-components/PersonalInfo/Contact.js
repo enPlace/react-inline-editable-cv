@@ -26,7 +26,7 @@ const Contact = ({ handleEditChange, isEditable}) => {
    const list = contactInfo.filter(item=> item.id !== e.target.name)
    const target = contactInfo.filter(item =>item.id === e.target.name)
    target[0].text = e.target.value
-   list.splice(target.[0].pos, 0, target[0])
+   list.splice(target[0].pos, 0, target[0])
    console.log(list)
    setContactInfo(list)
   }
