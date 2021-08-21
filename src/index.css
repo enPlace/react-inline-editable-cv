@@ -53,15 +53,22 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: flex-end;
 }
 .contactItem{
   display:flex;
-  width: 150px;
+  
   text-align: right;
 }
 .contactItem form{
   text-align: right;
+  max-width: 120px;
 }
+.contactItem input{
+  max-width: 120px;
+  text-align: right;
+}
+
 .contactItemName{
   width: 100%;
 }
@@ -69,4 +76,12 @@ code {
 .contactItem img{
   width: 20px;
   margin-left: 10px;
+}
+
+.work-experience{
+  border-bottom: 1px solid gray;
+  padding: 20px;
+}
+.work-experience h2{
+  margin-top: 0px;
 }
