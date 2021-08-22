@@ -2,16 +2,8 @@ import { useState } from "react";
 import NewExperienceForm from "./workExperienceSubComponents/NewExperienceForm";
 import SavedWorkExperience from "./workExperienceSubComponents/SavedWorkExperience";
 
-/* 
-So what do I need to do here-
-submit the work object as a completed form. 
-
-I need to take that information that is in userInfo and format it into html 
-style it with css 
-
-*/
 const WorkExperience = ({ isEditable, setIsEditable, handleEditChange }) => {
-  //On clicking the button, it should toggle the handleEditChange.
+
   const [userInfo, setUserInfo] = useState(false);
 
   const emptyWorkObject = {

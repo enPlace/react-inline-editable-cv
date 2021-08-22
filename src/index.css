@@ -11,6 +11,9 @@ body {
   align-items: center;
 
 }
+h2 {
+  margin-top: 0;
+}
 .App{
   display: flex;
   flex-direction: column;
@@ -77,7 +80,10 @@ code {
   width: 20px;
   margin-left: 10px;
 }
-
+.work-experience{
+  border-bottom: 1px solid gray;
+  padding: 20px;
+}
 .work-experience-form{
   border-bottom: 1px solid gray;
   padding: 20px;
@@ -89,4 +95,8 @@ code {
   display: flex;
   flex-direction: column;
   max-width: 400px;
+}
+.education{
+  border-bottom: 1px solid gray;
+  padding: 20px;
 }
