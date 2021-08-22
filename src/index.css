@@ -78,14 +78,14 @@ code {
   margin-left: 10px;
 }
 
-.work-experience{
+.work-experience-form{
   border-bottom: 1px solid gray;
   padding: 20px;
 }
 .work-experience h2{
   margin-top: 0px;
 }
-.work-experience form{
+.work-experience-form form{
   display: flex;
   flex-direction: column;
   max-width: 400px;

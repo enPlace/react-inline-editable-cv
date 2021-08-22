@@ -17,7 +17,11 @@ const Cv = () => {
         handleEditChange={handleEditChange}
         isEditable={isEditable}
       ></PersonalInfo>
-      <WorkExperience isEditable = {isEditable} setIsEditable = {setIsEditable} handleEditChange = {handleEditChange}></WorkExperience>
+      <WorkExperience
+        isEditable={isEditable}
+        setIsEditable={setIsEditable}
+        handleEditChange={handleEditChange}
+      ></WorkExperience>
     </div>
   );
 };
