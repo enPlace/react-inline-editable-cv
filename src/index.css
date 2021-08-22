@@ -100,3 +100,14 @@ code {
   border-bottom: 1px solid gray;
   padding: 20px;
 }
+.education form{
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 10px;
+
+}
+.education button{
+  margin-right: 5px;
+  margin-top: 10px;
+}

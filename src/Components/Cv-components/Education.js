@@ -3,24 +3,46 @@ import NewEducationForm from "./educationSubComponents/NewEducationForm";
 import SavedEducation from "./educationSubComponents/SavedEducation";
 
 const Education = ({ isEditable, setIsEditable, handleEditChange }) => {
-  const [userInfo, setUserinfo] = useState(false);
-  const emptyEducationObject = {
-    name: "",
+  const [userInfo, setUserInfo] = useState(false);
+  const emptyFormObject = {
+    schoolName: "",
     city: "",
     fromDate: "",
     toDate: "",
     degree: "",
     description: "",
   };
-  const [educationObject, setEducationObject] = useState(emptyEducationObject);
+  const [formState, setFormState] = useState(emptyFormObject);
+  const handleChange = (e) => {
+    const targ = e.target;
+    setFormState({
+      ...formState,
+      [targ.name]: [targ.value],
+    });
+  };
+  const handleSubmit = () => {
+    if (!userInfo) {
+      setUserInfo([formState]);
+    } else {
+      userInfo.push(formState);
+    }
+    setFormState(emptyFormObject);
+    setIsEditable(false)
+  };
   return (
     <div className="education">
       <h2>Education</h2>
-      <SavedEducation></SavedEducation>
-      <NewEducationForm></NewEducationForm>
+      <SavedEducation userInfo={userInfo}></SavedEducation>
+      <NewEducationForm
+        isEditable = {isEditable}
+        setIsEditable = {setIsEditable}
+        formState={formState}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      ></NewEducationForm>
       <button
         className="editEducation"
-        onClick={() => handleEditChange("work")}
+        onClick={() => handleEditChange("education")}
       >
         + Education
       </button>
