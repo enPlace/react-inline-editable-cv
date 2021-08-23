@@ -17,7 +17,7 @@ const Education = ({ isEditable, setIsEditable, handleEditChange }) => {
     const targ = e.target;
     setFormState({
       ...formState,
-      [targ.name]: [targ.value],
+      [targ.name]: targ.value,
     });
   };
   const handleSubmit = () => {
@@ -32,7 +32,7 @@ const Education = ({ isEditable, setIsEditable, handleEditChange }) => {
   return (
     <div className="education">
       <h2>Education</h2>
-      <SavedEducation userInfo={userInfo}></SavedEducation>
+     <SavedEducation userInfo={userInfo}></SavedEducation> 
       <NewEducationForm
         isEditable = {isEditable}
         setIsEditable = {setIsEditable}
