@@ -8,13 +8,13 @@ const Skills = ({ isEditable, setIsEditable, handleEditChange }) => {
   const [newSkill, setNewSkill] = useState(emptySkill);
 
   const handleChange = (e) => {
-    const targ = e.target;
     setNewSkill({
       ...newSkill,
-      [targ.name]: targ.value,
-      [targ.pos]: targ.pos,
-      [targ.id]: targ.id,
+      text: e.target.value,
+      pos: e.target.dataset.pos,
+      id: e.target.value,
     });
+
   };
   const handleSubmit = () => {
     if (!userInfo) {
@@ -22,17 +22,20 @@ const Skills = ({ isEditable, setIsEditable, handleEditChange }) => {
     } else {
       userInfo.push(newSkill);
     }
+    console.log(userInfo)
     setNewSkill(emptySkill);
   };
-  
+
   return (
     <div className="skills">
       <h2>Skills</h2>
+      <SavedSkills userInfo={userInfo}></SavedSkills>
       <NewSkillsForm
+        newSkill={newSkill}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       ></NewSkillsForm>
-      <SavedSkills userInfo={userInfo}></SavedSkills>
+      
     </div>
   );
 };
