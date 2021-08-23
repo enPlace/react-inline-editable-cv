@@ -39,6 +39,7 @@ code {
   border:2px solid black;
   width: 80vw;
   min-height: 80vh;
+  margin: 20px;
 }
 .personal-info{
   border-bottom: 1px solid gray;
@@ -84,8 +85,11 @@ code {
   border-bottom: 1px solid gray;
   padding: 20px;
 }
+.work-experience.saved{
+  border-bottom: none;
+}
 .work-experience-form{
-  border-bottom: 1px solid gray;
+
   padding: 20px;
 }
 .work-experience h2{
@@ -105,9 +109,14 @@ code {
   flex-direction: column;
   max-width: 400px;
   padding: 10px;
+  border-bottom: 1px solid gray;
 
 }
 .education button{
   margin-right: 5px;
   margin-top: 10px;
+}
+
+.skills{
+  padding: 20px;
 }

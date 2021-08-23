@@ -2,6 +2,7 @@ import { useState } from "react";
 import PersonalInfo from "./Cv-components/Personal-info";
 import WorkExperience from "./Cv-components/Work-experience";
 import Education from "./Cv-components/Education";
+import Skills from "./Cv-components/Skills";
 const Cv = () => {
   const [isEditable, setIsEditable] = useState(false);
 
@@ -28,6 +29,11 @@ const Cv = () => {
         setIsEditable={setIsEditable}
         handleEditChange={handleEditChange}
       ></Education>
+      <Skills
+      isEditable={isEditable}
+      setIsEditable={setIsEditable}
+      handleEditChange={handleEditChange}></Skills>
+      
     </div>
   );
 };

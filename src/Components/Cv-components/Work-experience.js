@@ -29,7 +29,6 @@ const WorkExperience = ({ isEditable, setIsEditable, handleEditChange }) => {
       obj[targ.name] = targ.value;
     }
     setWorkObject(obj);
-    console.log(workObject);
   };
   const handleSubmit = (e) => {
     if (!userInfo) {
