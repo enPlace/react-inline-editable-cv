@@ -1,13 +1,24 @@
+import { useState } from "react";
+const EditWork = ({ userInfo, setUserInfo, id, setIsEditable}) => {
+  const [workObject, setWorkObject] = useState(userInfo[id]);
 
-const NewExperienceForm = ({
-  handleChange,
-  workObject,
-  handleSubmit,
-  isEditable,
-  setIsEditable,
-}) => {
-  
-  return isEditable !== "work" ? null : (
+  const handleChange = (e) => {
+    const obj = { ...workObject };
+    const targ = e.target;
+    if (targ.classList.contains("responsibility")) {
+      obj.responsibilities[targ.name].text = targ.value;
+      obj.responsibilities[targ.name].id = targ.name;
+    } else {
+      obj[targ.name] = targ.value;
+    }
+    setWorkObject(obj);
+  };
+  const handleSubmit = () => {
+    userInfo[id] = workObject;
+    setIsEditable(false)
+  };
+
+  return (
     <div className="work-experience-form">
       <form
         action=""
@@ -85,11 +96,11 @@ const NewExperienceForm = ({
           >
             Cancel
           </button>
-          <button type="submit">Add work experience</button>
+          <button type="submit">Save changes</button>
         </div>
       </form>
     </div>
   );
 };
 
-export default NewExperienceForm;
+export default EditWork;

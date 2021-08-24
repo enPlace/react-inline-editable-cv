@@ -1,6 +1,6 @@
 import { useState } from "react";
 const NewSkillsForm = ({ newSkill, handleChange, handleSubmit }) => {
-    const [pos, setPos] = useState(0)
+  const [pos, setPos] = useState(0);
   return (
     <form
       action=""
@@ -8,7 +8,7 @@ const NewSkillsForm = ({ newSkill, handleChange, handleSubmit }) => {
       onSubmit={(e) => {
         e.preventDefault();
         handleSubmit();
-        setPos(pos+1);
+        setPos(pos + 1);
       }}
     >
       <input

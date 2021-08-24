@@ -120,3 +120,14 @@ code {
 .skills{
   padding: 20px;
 }
+.skillsContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill{
+
+  border-radius: 4px;
+  background-color: rgb(223, 223, 223);
+  margin: 7px;
+  padding: 4px;
+}

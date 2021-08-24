@@ -14,7 +14,6 @@ const Skills = ({ isEditable, setIsEditable, handleEditChange }) => {
       pos: e.target.dataset.pos,
       id: e.target.value,
     });
-
   };
   const handleSubmit = () => {
     if (!userInfo) {
@@ -22,7 +21,6 @@ const Skills = ({ isEditable, setIsEditable, handleEditChange }) => {
     } else {
       userInfo.push(newSkill);
     }
-    console.log(userInfo)
     setNewSkill(emptySkill);
   };
 
@@ -35,7 +33,6 @@ const Skills = ({ isEditable, setIsEditable, handleEditChange }) => {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       ></NewSkillsForm>
-      
     </div>
   );
 };

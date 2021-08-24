@@ -2,9 +2,17 @@ import { useState } from "react";
 import NewExperienceForm from "./workExperienceSubComponents/NewExperienceForm";
 import SavedWorkExperience from "./workExperienceSubComponents/SavedWorkExperience";
 
-const WorkExperience = ({ isEditable, setIsEditable, handleEditChange }) => {
-
+const WorkExperience = () => {
   const [userInfo, setUserInfo] = useState(false);
+  const [pos, setPos] = useState(0);
+  const [isEditable, setIsEditable] = useState(false);
+  const handleEditChange = (id) => {
+    if (id && isEditable !== id) {
+      setIsEditable(id);
+    } else {
+      setIsEditable(false);
+    }
+  };
 
   const emptyWorkObject = {
     company: "",
@@ -16,6 +24,7 @@ const WorkExperience = ({ isEditable, setIsEditable, handleEditChange }) => {
       { text: "", id: "" },
       { text: "", id: "" },
     ],
+    id: "",
   };
   const [workObject, setWorkObject] = useState(emptyWorkObject);
 
@@ -31,19 +40,25 @@ const WorkExperience = ({ isEditable, setIsEditable, handleEditChange }) => {
     setWorkObject(obj);
   };
   const handleSubmit = (e) => {
+    workObject.id = pos;
     if (!userInfo) {
       setUserInfo([workObject]);
     } else {
       userInfo.push(workObject);
     }
     setWorkObject(emptyWorkObject);
+    setPos(pos + 1);
     setIsEditable(false);
   };
 
   return (
     <div className="work-experience">
       <h2>WORK EXPERIENCE</h2>
-      <SavedWorkExperience userInfo={userInfo}></SavedWorkExperience>
+      <SavedWorkExperience
+        userInfo={userInfo}
+        isEditable={isEditable}
+        setIsEditable={setIsEditable}
+      ></SavedWorkExperience>
       <NewExperienceForm
         isEditable={isEditable}
         handleChange={handleChange}
