@@ -1,12 +1,12 @@
-
+import Responsibilities from "./Responsibilities";
 const NewExperienceForm = ({
   handleChange,
   workObject,
   handleSubmit,
   isEditable,
   setIsEditable,
+  setWorkObject,
 }) => {
-  
   return isEditable !== "work" ? null : (
     <div className="work-experience-form">
       <form
@@ -59,23 +59,12 @@ const NewExperienceForm = ({
           type="text"
           className="positionTitle"
         />
-        <label htmlFor="responsibilities">Responsibilities:</label>
-        <input
-          onChange={(e) => handleChange(e)}
-          value={workObject.responsibilities[0].text}
-          name="0"
-          placeholder=""
-          type="text"
-          className="responsibility"
-        />
-        <input
-          onChange={(e) => handleChange(e)}
-          value={workObject.responsibilities[1].text}
-          name="1"
-          type="text"
-          className="responsibility"
-        />
-        <button className="addResponsibility">+ New Responsibility</button>
+        <Responsibilities
+          workObject={workObject}
+          setWorkObject={setWorkObject}
+          handleChange={handleChange}
+        ></Responsibilities>
+
         <div className="formButtons">
           <button
             type="reset"

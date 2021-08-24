@@ -1,5 +1,5 @@
 import { useState } from "react";
-const EditWork = ({ userInfo, setUserInfo, id, setIsEditable}) => {
+const EditWork = ({ userInfo, id, setIsEditable}) => {
   const [workObject, setWorkObject] = useState(userInfo[id]);
 
   const handleChange = (e) => {

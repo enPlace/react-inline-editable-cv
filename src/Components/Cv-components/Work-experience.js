@@ -21,8 +21,8 @@ const WorkExperience = () => {
     toDate: "",
     positionTitle: "",
     responsibilities: [
-      { text: "", id: "" },
-      { text: "", id: "" },
+      { text: "", id: "0" },
+      { text: "", id: "1" },
     ],
     id: "",
   };
@@ -65,6 +65,7 @@ const WorkExperience = () => {
         workObject={workObject}
         handleSubmit={handleSubmit}
         setIsEditable={setIsEditable}
+        setWorkObject = {setWorkObject}
       ></NewExperienceForm>
       <button onClick={() => handleEditChange("work")}>
         + Work Experience
