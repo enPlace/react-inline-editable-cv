@@ -1,6 +1,6 @@
 import { useState } from "react";
 const Responsibilities = ({ workObject, setWorkObject, handleChange }) => {
-  const [respId, setRespId] = useState(2);
+  const [respId, setRespId] = useState(workObject.responsibilities.length);
   const newResponsibility = () => {
     const obj = { ...workObject };
     obj.responsibilities[respId] = { text: "", id: respId };

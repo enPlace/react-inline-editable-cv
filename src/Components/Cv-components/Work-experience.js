@@ -39,8 +39,19 @@ const WorkExperience = () => {
     }
     setWorkObject(obj);
   };
+  const cleanResp = (workobj) => {
+    let position = 0
+    console.log(workobj);
+    const resp = workobj.responsibilities.filter((resp) =>  resp.text !== "")
+    resp.forEach(resp=>{
+      resp.id = position
+      position++
+    })
+    workobj.responsibilities = resp
+  };
   const handleSubmit = (e) => {
     workObject.id = pos;
+    cleanResp(workObject);
     if (!userInfo) {
       setUserInfo([workObject]);
     } else {
@@ -65,7 +76,7 @@ const WorkExperience = () => {
         workObject={workObject}
         handleSubmit={handleSubmit}
         setIsEditable={setIsEditable}
-        setWorkObject = {setWorkObject}
+        setWorkObject={setWorkObject}
       ></NewExperienceForm>
       <button onClick={() => handleEditChange("work")}>
         + Work Experience

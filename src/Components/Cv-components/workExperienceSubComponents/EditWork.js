@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Responsibilities from "./Responsibilities";
 const EditWork = ({ userInfo, id, setIsEditable}) => {
   const [workObject, setWorkObject] = useState(userInfo[id]);
 
@@ -70,8 +71,12 @@ const EditWork = ({ userInfo, id, setIsEditable}) => {
           type="text"
           className="positionTitle"
         />
-        <label htmlFor="responsibilities">Responsibilities:</label>
-        <input
+        <Responsibilities
+        workObject = {workObject}
+        setWorkObject = {setWorkObject}
+        handleChange = {handleChange}
+        ></Responsibilities>
+{/*         <input
           onChange={(e) => handleChange(e)}
           value={workObject.responsibilities[0].text}
           name="0"
@@ -86,7 +91,7 @@ const EditWork = ({ userInfo, id, setIsEditable}) => {
           type="text"
           className="responsibility"
         />
-        <button className="addResponsibility">+ New Responsibility</button>
+        <button className="addResponsibility">+ New Responsibility</button> */}
         <div className="formButtons">
           <button
             type="reset"

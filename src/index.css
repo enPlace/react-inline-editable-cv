@@ -131,3 +131,7 @@ code {
   margin: 7px;
   padding: 4px;
 }
+.responsibilities{
+  display: flex;
+  flex-direction: column;
+}
