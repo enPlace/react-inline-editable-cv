@@ -20,6 +20,7 @@ const SavedWorkExperience = ({ userInfo, isEditable, setIsEditable }) => {
             <ul>
               {work.responsibilities.map((responsibility) => {
                 return (
+                
                   <li
                     className="responsibility"
                     id={"responsibility" + responsibility.id}

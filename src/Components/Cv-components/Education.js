@@ -2,7 +2,17 @@ import { useState } from "react";
 import NewEducationForm from "./educationSubComponents/NewEducationForm";
 import SavedEducation from "./educationSubComponents/SavedEducation";
 
-const Education = ({ isEditable, setIsEditable, handleEditChange }) => {
+const Education = () => {
+  const [isEditable, setIsEditable] = useState(false);
+  const [pos, setPos] = useState(0);
+
+  const handleEditChange = (id) => {
+    if (id && isEditable !== id) {
+      setIsEditable(id);
+    } else {
+      setIsEditable(false);
+    }
+  };
   const [userInfo, setUserInfo] = useState(false);
   const emptyFormObject = {
     schoolName: "",
@@ -11,6 +21,7 @@ const Education = ({ isEditable, setIsEditable, handleEditChange }) => {
     toDate: "",
     degree: "",
     description: "",
+    id: "",
   };
   const [formState, setFormState] = useState(emptyFormObject);
   const handleChange = (e) => {
@@ -21,21 +32,27 @@ const Education = ({ isEditable, setIsEditable, handleEditChange }) => {
     });
   };
   const handleSubmit = () => {
+    formState.id = pos;
+    setPos(pos + 1);
     if (!userInfo) {
       setUserInfo([formState]);
     } else {
       userInfo.push(formState);
     }
     setFormState(emptyFormObject);
-    setIsEditable(false)
+    setIsEditable(false);
   };
   return (
     <div className="education">
       <h2>Education</h2>
-     <SavedEducation userInfo={userInfo}></SavedEducation> 
-      <NewEducationForm
-        isEditable = {isEditable}
+      <SavedEducation
+        userInfo={userInfo}
+        isEditable={isEditable}
         setIsEditable = {setIsEditable}
+      ></SavedEducation>
+      <NewEducationForm
+        isEditable={isEditable}
+        setIsEditable={setIsEditable}
         formState={formState}
         handleChange={handleChange}
         handleSubmit={handleSubmit}

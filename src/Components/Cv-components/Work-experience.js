@@ -41,7 +41,6 @@ const WorkExperience = () => {
   };
   const cleanResp = (workobj) => {
     let position = 0
-    console.log(workobj);
     const resp = workobj.responsibilities.filter((resp) =>  resp.text !== "")
     resp.forEach(resp=>{
       resp.id = position

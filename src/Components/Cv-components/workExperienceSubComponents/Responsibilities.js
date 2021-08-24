@@ -13,7 +13,7 @@ const Responsibilities = ({ workObject, setWorkObject, handleChange }) => {
       <label htmlFor="responsibilities">Responsibilities:</label>
       {workObject.responsibilities.map((resp) => {
         return (
-          <input
+          <input key = {resp.id}
             onChange={(e) => handleChange(e)}
             value={resp.text}
             name={resp.id}
