@@ -2,17 +2,18 @@ import { useState } from "react";
 import NewSkillsForm from "./skillsSubComponents/NewSkillsForm";
 import SavedSkills from "./skillsSubComponents/SavedSkills";
 
-const Skills = ({ isEditable, setIsEditable, handleEditChange }) => {
+const Skills = () => {
   const [userInfo, setUserInfo] = useState(false);
-  const emptySkill = { text: "", id: "", pos: "" };
+  const emptySkill = { text: "", id: "" };
   const [newSkill, setNewSkill] = useState(emptySkill);
+  const [pos, setPos] = useState(0);
+  const [isEditable, setIsEditable] = useState(false);
 
   const handleChange = (e) => {
     setNewSkill({
       ...newSkill,
       text: e.target.value,
-      pos: e.target.dataset.pos,
-      id: e.target.value,
+      id: e.target.dataset.pos,
     });
   };
   const handleSubmit = () => {
@@ -27,11 +28,19 @@ const Skills = ({ isEditable, setIsEditable, handleEditChange }) => {
   return (
     <div className="skills">
       <h2>Skills</h2>
-      <SavedSkills userInfo={userInfo}></SavedSkills>
+      <SavedSkills
+        userInfo={userInfo}
+        setUserInfo={setUserInfo}
+        isEditable={isEditable}
+        setIsEditable={setIsEditable}
+        setPos={setPos}
+      ></SavedSkills>
       <NewSkillsForm
         newSkill={newSkill}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
+        pos={pos}
+        setPos={setPos}
       ></NewSkillsForm>
     </div>
   );

@@ -1,14 +1,18 @@
-import { useState } from "react";
-const NewSkillsForm = ({ newSkill, handleChange, handleSubmit }) => {
-  const [pos, setPos] = useState(0);
+
+const NewSkillsForm = ({ newSkill, handleChange, handleSubmit, pos, setPos }) => {
+  
   return (
     <form
       action=""
       className="newSkill"
       onSubmit={(e) => {
         e.preventDefault();
-        handleSubmit();
-        setPos(pos + 1);
+        if(newSkill.text === ""){}
+        else{
+          handleSubmit();
+          setPos(pos + 1);
+        }
+
       }}
     >
       <input
