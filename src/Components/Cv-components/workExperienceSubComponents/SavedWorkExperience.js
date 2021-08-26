@@ -1,15 +1,27 @@
 import EditWork from "./EditWork";
 
-const SavedWorkExperience = ({ userInfo, isEditable, setIsEditable }) => {
-
-
+const SavedWorkExperience = ({
+  userInfo,
+  isEditable,
+  setIsEditable,
+  cleanResp,
+}) => {
   return !userInfo ? null : (
     <div className="work-experience saved">
       {userInfo.map((work) => {
         return isEditable === work.id ? (
-          <EditWork userInfo = {userInfo} id = {work.id} setIsEditable = {setIsEditable} ></EditWork>
+          <EditWork
+            cleanResp={cleanResp}
+            userInfo={userInfo}
+            id={work.id}
+            setIsEditable={setIsEditable}
+          ></EditWork>
         ) : (
-          <div className="companyInfo" key={work.id} onClick = {()=>setIsEditable(work.id)}>
+          <div
+            className="companyInfo"
+            key={work.id}
+            onClick={() => setIsEditable(work.id)}
+          >
             <h3 className="companyName">{work.company}</h3>
             <p className="companyCity">{work.companyCity}</p>
             <p className="companyDates">
@@ -20,7 +32,6 @@ const SavedWorkExperience = ({ userInfo, isEditable, setIsEditable }) => {
             <ul>
               {work.responsibilities.map((responsibility) => {
                 return (
-                
                   <li
                     className="responsibility"
                     id={"responsibility" + responsibility.id}

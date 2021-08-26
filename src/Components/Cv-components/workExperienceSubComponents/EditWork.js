@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Responsibilities from "./Responsibilities";
-const EditWork = ({ userInfo, id, setIsEditable}) => {
+const EditWork = ({ userInfo, id, setIsEditable, cleanResp}) => {
   const [workObject, setWorkObject] = useState(userInfo[id]);
 
   const handleChange = (e) => {
@@ -15,6 +15,7 @@ const EditWork = ({ userInfo, id, setIsEditable}) => {
     setWorkObject(obj);
   };
   const handleSubmit = () => {
+    cleanResp(workObject)
     userInfo[id] = workObject;
     setIsEditable(false)
   };

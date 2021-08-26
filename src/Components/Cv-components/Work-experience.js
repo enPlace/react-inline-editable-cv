@@ -68,6 +68,7 @@ const WorkExperience = () => {
         userInfo={userInfo}
         isEditable={isEditable}
         setIsEditable={setIsEditable}
+        cleanResp = {cleanResp}
       ></SavedWorkExperience>
       <NewExperienceForm
         isEditable={isEditable}
