@@ -25,6 +25,7 @@ const Responsibilities = ({ workObject, setWorkObject, handleChange }) => {
       })}
       <button
         className="addResponsibility"
+        type = "button"
         onClick={(e) => {
           e.preventDefault();
           newResponsibility();

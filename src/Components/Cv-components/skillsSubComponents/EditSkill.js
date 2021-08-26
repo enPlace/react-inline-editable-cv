@@ -34,7 +34,10 @@ const EditSkill = ({ userInfo, setUserInfo, setIsEditable, setPos, id }) => {
       </button>
       <button
         type="button"
-        onClick={() => deleteInfo(userInfo, setUserInfo, setPos, id)}
+        onClick={() => {
+          deleteInfo(userInfo, setUserInfo, setPos, id)
+          setIsEditable(false)
+        }}
       >
         del
       </button>

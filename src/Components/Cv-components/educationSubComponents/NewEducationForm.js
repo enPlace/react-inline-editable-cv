@@ -6,10 +6,14 @@ const NewEducationForm = ({
   setIsEditable,
 }) => {
   return isEditable !== "education" ? null : (
-    <form action="" className="educationForm" onSubmit = {(e)=>{
-        e.preventDefault(); 
-        handleSubmit()
-    }}>
+    <form
+      action=""
+      className="educationForm"
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleSubmit();
+      }}
+    >
       <label htmlFor="educaitonName">School or Institution:</label>
       <input
         type="text"
@@ -65,7 +69,9 @@ const NewEducationForm = ({
         }}
       />
       <div className="buttons">
-        <button onClick={() => setIsEditable(false)}>Cancel</button>
+        <button type="button" onClick={() => setIsEditable(false)}>
+          Cancel
+        </button>
         <button type="submit">Add school</button>
       </div>
     </form>

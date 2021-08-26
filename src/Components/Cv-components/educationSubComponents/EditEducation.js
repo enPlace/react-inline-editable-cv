@@ -85,7 +85,14 @@ const EditEducation = ({
       />
       <div className="buttons">
         <button onClick={() => setIsEditable(false)}>Cancel</button>
-        <button onClick= {()=>deleteInfo(userInfo, setUserInfo, setPos, id)} >Delete</button>
+        <button
+          onClick={() => {
+            setIsEditable(false);
+            deleteInfo(userInfo, setUserInfo, setPos, id);
+          }}
+        >
+          Delete
+        </button>
         <button type="submit">Save changes</button>
       </div>
     </form>

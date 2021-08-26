@@ -95,7 +95,10 @@ const EditWork = ({
             Cancel
           </button>
           <button
-            onClick={() => deleteInfo(userInfo, setUserInfo, setPos, id)}
+            onClick={() => {
+              setIsEditable(false)
+              deleteInfo(userInfo, setUserInfo, setPos, id)
+            }}
           >
             Delete
           </button>
