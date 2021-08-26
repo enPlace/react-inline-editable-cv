@@ -1,6 +1,14 @@
 import { useState } from "react";
 import Responsibilities from "./Responsibilities";
-const EditWork = ({ userInfo, id, setIsEditable, cleanResp}) => {
+import { deleteInfo } from "../../../Modules/DeleteInfo";
+const EditWork = ({
+  userInfo,
+  setUserInfo,
+  id,
+  setIsEditable,
+  cleanResp,
+  setPos,
+}) => {
   const [workObject, setWorkObject] = useState(userInfo[id]);
 
   const handleChange = (e) => {
@@ -15,9 +23,9 @@ const EditWork = ({ userInfo, id, setIsEditable, cleanResp}) => {
     setWorkObject(obj);
   };
   const handleSubmit = () => {
-    cleanResp(workObject)
+    cleanResp(workObject);
     userInfo[id] = workObject;
-    setIsEditable(false)
+    setIsEditable(false);
   };
 
   return (
@@ -73,26 +81,10 @@ const EditWork = ({ userInfo, id, setIsEditable, cleanResp}) => {
           className="positionTitle"
         />
         <Responsibilities
-        workObject = {workObject}
-        setWorkObject = {setWorkObject}
-        handleChange = {handleChange}
+          workObject={workObject}
+          setWorkObject={setWorkObject}
+          handleChange={handleChange}
         ></Responsibilities>
-{/*         <input
-          onChange={(e) => handleChange(e)}
-          value={workObject.responsibilities[0].text}
-          name="0"
-          placeholder=""
-          type="text"
-          className="responsibility"
-        />
-        <input
-          onChange={(e) => handleChange(e)}
-          value={workObject.responsibilities[1].text}
-          name="1"
-          type="text"
-          className="responsibility"
-        />
-        <button className="addResponsibility">+ New Responsibility</button> */}
         <div className="formButtons">
           <button
             type="reset"
@@ -101,6 +93,11 @@ const EditWork = ({ userInfo, id, setIsEditable, cleanResp}) => {
             }}
           >
             Cancel
+          </button>
+          <button
+            onClick={() => deleteInfo(userInfo, setUserInfo, setPos, id)}
+          >
+            Delete
           </button>
           <button type="submit">Save changes</button>
         </div>

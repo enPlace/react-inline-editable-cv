@@ -40,15 +40,18 @@ const Education = () => {
       userInfo.push(formState);
     }
     setFormState(emptyFormObject);
-    setIsEditable(false);
+    setIsEditable(false)
+    
   };
   return (
     <div className="education">
       <h2>Education</h2>
       <SavedEducation
         userInfo={userInfo}
+        setUserInfo = {setUserInfo}
         isEditable={isEditable}
         setIsEditable = {setIsEditable}
+        setPos = {setPos}
       ></SavedEducation>
       <NewEducationForm
         isEditable={isEditable}

@@ -1,5 +1,5 @@
 import EditEducation from "./EditEducation";
-const SavedEducation = ({ userInfo, isEditable, setIsEditable }) => {
+const SavedEducation = ({ userInfo, setUserInfo, isEditable, setIsEditable, setPos}) => {
   let key = 0;
   return !userInfo ? null : (
     <div className="userEducation">
@@ -8,8 +8,10 @@ const SavedEducation = ({ userInfo, isEditable, setIsEditable }) => {
         return isEditable === school.id ? (
           <EditEducation
           userInfo = {userInfo}
+          setUserInfo = {setUserInfo}
           id = {school.id}
           setIsEditable = {setIsEditable}
+          setPos = {setPos}
           ></EditEducation>
 
         )

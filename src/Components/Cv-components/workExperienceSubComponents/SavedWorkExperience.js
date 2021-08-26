@@ -2,9 +2,11 @@ import EditWork from "./EditWork";
 
 const SavedWorkExperience = ({
   userInfo,
+  setUserInfo,
   isEditable,
   setIsEditable,
   cleanResp,
+  setPos,
 }) => {
   return !userInfo ? null : (
     <div className="work-experience saved">
@@ -13,8 +15,10 @@ const SavedWorkExperience = ({
           <EditWork
             cleanResp={cleanResp}
             userInfo={userInfo}
+            setUserInfo={setUserInfo}
             id={work.id}
             setIsEditable={setIsEditable}
+            setPos={setPos}
           ></EditWork>
         ) : (
           <div
