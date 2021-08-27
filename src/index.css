@@ -1,10 +1,10 @@
-html{
+html {
 }
 body {
   margin: 0;
   width: 125%;
   height: 125%;
-  transform-origin:top left;
+  transform-origin: top left;
   transform: scale(80%);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -42,13 +42,12 @@ code {
 #main-icon {
   width: 80px;
 }
-.togglePreview{
+.togglePreview {
   display: flex;
   margin-left: 40px;
-
 }
-.togglePreview button{
-  border:none;
+.togglePreview button {
+  border: none;
   border-bottom: 3px solid transparent;
   font-size: x-large;
   margin-top: 20px;
@@ -57,12 +56,11 @@ code {
   min-width: 100px;
   margin-bottom: 10px;
 }
-.togglePreview button.active{
+.togglePreview button.active {
   border-bottom: 3px solid teal;
   background-color: white;
-  
 }
-.togglePreview button:hover{
+.togglePreview button:hover {
   cursor: pointer;
 }
 .cv-body {
@@ -74,7 +72,6 @@ code {
   min-height: 80vh;
   margin: 20px;
   margin-top: 0px;
- 
 }
 .personal-info {
   border-bottom: 1px solid gray;
@@ -120,7 +117,6 @@ code {
   margin-top: 20px;
   max-width: 450px;
   line-height: 1.5;
-  
 }
 .aboutMe:hover {
   box-shadow: 1px 3px 5px rgba(84, 84, 84, 0.5);
@@ -299,23 +295,23 @@ code {
 }
 .preview *:hover {
   cursor: text;
-  box-shadow:none;
+  box-shadow: none;
 }
-.preview{
+.preview {
   border-bottom: none;
 }
-.preview button{
+.preview button {
   display: none;
 }
-.preview .primaryInfo .name h1:hover{
-  box-shadow:none;
+.preview .primaryInfo .name h1:hover {
+  box-shadow: none;
   cursor: text;
 }
 
 .work-experience.preview {
   padding-bottom: 0px;
 }
-.education.preview{
+.education.preview {
   margin-top: -20px;
 }
 footer {
@@ -325,11 +321,11 @@ footer {
   width: 96%;
   padding: 3px;
 }
-a{
+a {
   display: flex;
   align-items: center;
 }
-#githubIcon{
+#githubIcon {
   width: 40px;
   margin-left: 10px;
 }
