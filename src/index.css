@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,144 +11,161 @@ body {
   align-items: center;
 
   background-color: rgb(223, 223, 223);
-
 }
 
 h2 {
   margin-top: 0;
 }
-.App{
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.main-header{
+.main-header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main-header h1{
-  margin:10px;
+.main-header h1 {
+  margin: 10px;
 }
-#main-icon{
+#main-icon {
   width: 80px;
 }
-.cv-body{
+.cv-body {
   background-color: white;
   box-shadow: 1px 3px 5px rgba(84, 84, 84, 0.9);
   width: 80vw;
   max-width: 800px;
-  
   min-height: 80vh;
   margin: 20px;
 }
-.personal-info{
+.personal-info {
   border-bottom: 1px solid gray;
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
-.primaryInfo{
+
+.primaryInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left:10px;
+  margin-left: 10px;
 }
-.name{
+.name {
   display: flex;
   align-items: center;
 }
-.name h1{
+.name h1 {
   margin-right: 10px;
 }
-.nameForm input{
+.name h1:hover {
+  cursor: pointer;
+}
+.nameForm input {
   font-size: 30px;
   font-weight: bold;
   max-width: 166px;
   height: 40px;
 }
-.role{
+.role {
   margin-bottom: 10px;
   margin-top: -15px;
-  color: teal
-  
+  color: teal;
 }
-.aboutMe{
+.role:hover {
+  cursor: pointer;
+}
+.aboutMe {
   margin-top: 20px;
   max-width: 450px;
-  
 }
-.contact{
+.aboutMe:hover {
+  cursor: pointer;
+}
+.aboutMe-form {
+  display: flex;
+  flex-direction: column;
+}
+.contact {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
 }
-.contactItem{
-  display:flex;
+.contactItem {
+  display: flex;
   text-align: right;
   margin-bottom: 5px;
 }
-.contactItem form{
+.contactItem form {
   text-align: right;
   max-width: 120px;
 }
-.contactItem input{
+.contactItem input {
   max-width: 120px;
   text-align: right;
 }
 
-.contactItemName{
+.contactItemName {
   width: 100%;
 }
+.contactItemName:hover {
+  cursor: pointer;
+}
 
-.contactItem img{
+.contactItem img {
   width: 20px;
   margin-left: 10px;
 }
-.work-experience{
+.work-experience {
   border-bottom: 1px solid gray;
   padding: 20px;
 }
-.work-experience.saved{
+.work-experience.saved {
   border-bottom: none;
   margin-top: -30px;
 }
-.companyInfo{
+.companyInfo {
   margin-bottom: 30px;
   border-left: 3px solid teal;
   padding-left: 10px;
 }
-.companyPositionTitle{
+.companyInfo:hover {
+  box-shadow: 1px 3px 5px rgba(84, 84, 84, 0.3);
+  cursor: pointer;
+}
+.companyPositionTitle {
   margin-bottom: -10px;
   color: teal;
 }
-.placeOfWork{
+.placeOfWork {
   display: flex;
   align-items: center;
 }
 
-.companyCity{
-  margin-left:5px;
-  font-size:15px;
+.companyCity {
+  margin-left: 5px;
+  font-size: 15px;
   font-style: italic;
 }
-.companyDates{
+.companyDates {
   margin-top: -15px;
-  font-size:12px;
+  font-size: 12px;
 }
-.work-experience-form{
+.work-experience-form {
   padding: 20px;
 }
-.work-experience h2{
+.work-experience h2 {
   margin-top: 0px;
 }
-.work-experience-form form{
+.work-experience-form form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
@@ -162,73 +179,82 @@ code {
 
 .responsibilities input {
   margin: 5px;
-  margin-left:10px;
+  margin-left: 10px;
   margin-right: 10px;
 }
-.education{
+.education {
   border-bottom: 1px solid gray;
   padding: 20px;
-  
 }
-.userEducation{
+.userEducation {
   padding: 20px;
   margin-top: -30px;
 }
-.schoolObject{
+.schoolObject:hover {
+  box-shadow: 1px 3px 5px rgba(84, 84, 84, 0.3);
+  cursor: pointer;
+}
+.schoolObject {
   margin-bottom: 30px;
   border-left: 3px solid teal;
   padding-left: 20px;
 }
-.schoolInfo{
+.schoolInfo {
   margin-top: -30px;
   display: flex;
   align-items: center;
 }
-.schoolCity{
+.schoolCity {
   margin-left: 5px;
   font-size: 15px;
   font-style: italic;
 }
 .dates {
   margin-top: -15px;
-  font-size:12px;
+  font-size: 12px;
 }
-.education form{
+.education form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
   padding: 10px;
   border-bottom: 1px solid gray;
-
 }
-.education button{
+.education input {
+  margin: 5px;
+}
+.education button {
   margin-right: 5px;
   margin-top: 10px;
 }
 
-.skills{
+.skills {
   padding: 20px;
   border-bottom: 1px solid gray;
 }
-.skills h2{
+.skills h2 {
   margin-bottom: -3px;
 }
+
 .skills input {
   margin-top: 10px;
 }
-.skillsContainer{
+
+.skillsContainer {
   display: flex;
   flex-wrap: wrap;
 }
-.skill{
-
+.skill {
   border-radius: 4px;
   background-color: rgba(0, 128, 128, 0.891);
   color: white;
   margin: 7px;
   padding: 4px;
 }
-.responsibilities{
+.skill:hover {
+  cursor: pointer;
+}
+.responsibilities {
   display: flex;
   flex-direction: column;
 }

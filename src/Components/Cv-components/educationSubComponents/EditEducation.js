@@ -29,6 +29,15 @@ const EditEducation = ({
         handleSubmit();
       }}
     >
+      <label htmlFor="degree">Degree, certification or title:</label>
+      <input
+        type="text"
+        name="degree"
+        value={formState.degree}
+        onChange={(e) => {
+          handleChange(e);
+        }}
+      />
       <label htmlFor="educaitonName">School or Institution:</label>
       <input
         type="text"
@@ -65,15 +74,7 @@ const EditEducation = ({
           handleChange(e);
         }}
       />
-      <label htmlFor="degree">Degree, certification or title:</label>
-      <input
-        type="text"
-        name="degree"
-        value={formState.degree}
-        onChange={(e) => {
-          handleChange(e);
-        }}
-      />
+
       <label htmlFor="description">Description or other information:</label>
       <input
         type="text"
@@ -84,8 +85,11 @@ const EditEducation = ({
         }}
       />
       <div className="buttons">
-        <button onClick={() => setIsEditable(false)}>Cancel</button>
+        <button type="button" onClick={() => setIsEditable(false)}>
+          Cancel
+        </button>
         <button
+          type="button"
           onClick={() => {
             setIsEditable(false);
             deleteInfo(userInfo, setUserInfo, setPos, id);

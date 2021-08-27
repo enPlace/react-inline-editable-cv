@@ -28,7 +28,7 @@ const SavedEducation = ({
             <h3 className="degree">{school.degree}</h3>
             <div className="schoolInfo">
               <h4 className="schoolName">{school.schoolName}</h4>
-              <div className="schoolCity"> - {school.city} </div>
+              <div className="schoolCity"> -{school.city} </div>
             </div>
 
             <div className="dates">

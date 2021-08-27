@@ -25,8 +25,8 @@ const AboutMe = ({ isEditable, setIsEditable }) => {
     >
       <textarea
         name="text"
-        rows="8"
-        cols="45"
+        rows="5"
+        cols="40"
         wrap="soft"
         type="text"
         value={about.about}

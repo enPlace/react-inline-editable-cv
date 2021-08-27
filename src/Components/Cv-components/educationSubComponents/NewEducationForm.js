@@ -14,6 +14,15 @@ const NewEducationForm = ({
         handleSubmit();
       }}
     >
+      <label htmlFor="degree">Degree, certification or title:</label>
+      <input
+        type="text"
+        name="degree"
+        value={formState.degree}
+        onChange={(e) => {
+          handleChange(e);
+        }}
+      />
       <label htmlFor="educaitonName">School or Institution:</label>
       <input
         type="text"
@@ -46,15 +55,6 @@ const NewEducationForm = ({
         type="text"
         name="toDate"
         value={formState.toDate}
-        onChange={(e) => {
-          handleChange(e);
-        }}
-      />
-      <label htmlFor="degree">Degree, certification or title:</label>
-      <input
-        type="text"
-        name="degree"
-        value={formState.degree}
         onChange={(e) => {
           handleChange(e);
         }}

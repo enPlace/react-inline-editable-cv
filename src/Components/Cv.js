@@ -5,7 +5,6 @@ import Education from "./Cv-components/Education";
 import Skills from "./Cv-components/Skills";
 const Cv = () => {
   const [isEditable, setIsEditable] = useState(false);
-
   const handleEditChange = (id) => {
     if (id && isEditable !== id) {
       setIsEditable(id);
@@ -15,16 +14,16 @@ const Cv = () => {
   };
   return (
     <div className="cv-body">
-      
       <PersonalInfo
         handleEditChange={handleEditChange}
         isEditable={isEditable}
-        setIsEditable = {setIsEditable}
+        setIsEditable={setIsEditable}
       ></PersonalInfo>
       <Skills
-      isEditable={isEditable}
-      setIsEditable={setIsEditable}
-      handleEditChange={handleEditChange}></Skills>
+        isEditable={isEditable}
+        setIsEditable={setIsEditable}
+        handleEditChange={handleEditChange}
+      ></Skills>
       <WorkExperience
         isEditable={isEditable}
         setIsEditable={setIsEditable}
@@ -35,8 +34,6 @@ const Cv = () => {
         setIsEditable={setIsEditable}
         handleEditChange={handleEditChange}
       ></Education>
-      
-      
     </div>
   );
 };

@@ -3,10 +3,12 @@ import NewSkillsForm from "./skillsSubComponents/NewSkillsForm";
 import SavedSkills from "./skillsSubComponents/SavedSkills";
 
 const Skills = () => {
-  const [userInfo, setUserInfo] = useState(false);
   const emptySkill = { text: "", id: "" };
+  const sampleSkill = {text: "Add a skill, or click me to edit", id: "0"}
+  const [userInfo, setUserInfo] = useState([sampleSkill]);
+
   const [newSkill, setNewSkill] = useState(emptySkill);
-  const [pos, setPos] = useState(0);
+  const [pos, setPos] = useState(1);
   const [isEditable, setIsEditable] = useState(false);
 
   const handleChange = (e) => {

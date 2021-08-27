@@ -3,17 +3,6 @@ import NewEducationForm from "./educationSubComponents/NewEducationForm";
 import SavedEducation from "./educationSubComponents/SavedEducation";
 
 const Education = () => {
-  const [isEditable, setIsEditable] = useState(false);
-  const [pos, setPos] = useState(0);
-
-  const handleEditChange = (id) => {
-    if (id && isEditable !== id) {
-      setIsEditable(id);
-    } else {
-      setIsEditable(false);
-    }
-  };
-  const [userInfo, setUserInfo] = useState(false);
   const emptyFormObject = {
     schoolName: "",
     city: "",
@@ -23,6 +12,28 @@ const Education = () => {
     description: "",
     id: "",
   };
+  const sampleEducationObject = {
+    schoolName: "School Name",
+    city: "City, State",
+    fromDate: "MONTH 20XX",
+    toDate: "MONTH 20XX",
+    degree: "Click to Edit",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
+    id: "0",
+  };
+  const [isEditable, setIsEditable] = useState(false);
+  const [pos, setPos] = useState(1);
+
+  const handleEditChange = (id) => {
+    if (id && isEditable !== id) {
+      setIsEditable(id);
+    } else {
+      setIsEditable(false);
+    }
+  };
+  const [userInfo, setUserInfo] = useState([sampleEducationObject]);
+
   const [formState, setFormState] = useState(emptyFormObject);
   const handleChange = (e) => {
     const targ = e.target;
@@ -40,18 +51,17 @@ const Education = () => {
       userInfo.push(formState);
     }
     setFormState(emptyFormObject);
-    setIsEditable(false)
-    
+    setIsEditable(false);
   };
   return (
     <div className="education">
       <h2>Education</h2>
       <SavedEducation
         userInfo={userInfo}
-        setUserInfo = {setUserInfo}
+        setUserInfo={setUserInfo}
         isEditable={isEditable}
-        setIsEditable = {setIsEditable}
-        setPos = {setPos}
+        setIsEditable={setIsEditable}
+        setPos={setPos}
       ></SavedEducation>
       <NewEducationForm
         isEditable={isEditable}
