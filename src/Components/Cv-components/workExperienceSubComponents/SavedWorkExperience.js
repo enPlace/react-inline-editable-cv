@@ -26,13 +26,15 @@ const SavedWorkExperience = ({
             key={work.id}
             onClick={() => setIsEditable(work.id)}
           >
-            <h3 className="companyName">{work.company}</h3>
-            <p className="companyCity">{work.companyCity}</p>
+            <h3 className="companyPositionTitle">{work.positionTitle}</h3>
+            <div className="placeOfWork">
+            <h4 className="companyName">{work.company}</h4>
+            <p className="companyCity"> - {work.companyCity}</p>
+            </div>
             <p className="companyDates">
-              {work.fromdate} - {work.toDate}
+              {work.fromDate} - {work.toDate}
             </p>
-            <h5 className="companyPositionTitle">{work.positionTitle}</h5>
-            <h4>Responsibilities:</h4>
+
             <ul>
               {work.responsibilities.map((responsibility) => {
                 return (

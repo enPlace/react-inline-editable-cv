@@ -20,6 +20,7 @@ const Responsibilities = ({ workObject, setWorkObject, handleChange }) => {
             placeholder=""
             type="text"
             className="responsibility"
+            onClick = {(e)=>e.target.select()}
           />
         );
       })}

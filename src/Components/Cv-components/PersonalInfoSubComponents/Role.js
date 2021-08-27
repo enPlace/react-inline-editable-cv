@@ -4,12 +4,14 @@ const Role = ({ isEditable, handleEditChange }) => {
     role: "Current Role",
     id: "currentRole",
   });
-  const handleChange = (e) => {
+
+  const handleRoleChange = (e) => {
     setRole({
       ...role,
       role: e.target.value,
     });
   };
+  
 
   return isEditable !== role.id ? (
     <div onClick={() => handleEditChange(role.id)} className="role">
@@ -17,21 +19,19 @@ const Role = ({ isEditable, handleEditChange }) => {
     </div>
   ) : (
     <form
+      className="role-form"
       action=""
       key={role.id}
-      className="role"
       id="role"
       onSubmit={(e) => {
         e.preventDefault();
         handleEditChange();
       }}
     >
-      <input
-        type="text"
-        name={role.id}
-        value={role.role}
-        onChange={(e) => handleChange(e)}
-      />
+      <input type="text" 
+      name={role.id}
+      value={role.role}
+      onChange={(e) => handleRoleChange(e)}/>
     </form>
   );
 };

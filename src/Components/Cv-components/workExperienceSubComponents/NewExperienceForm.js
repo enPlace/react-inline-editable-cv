@@ -16,6 +16,15 @@ const NewExperienceForm = ({
           handleSubmit();
         }}
       >
+        <label htmlFor="positionTitle">Position/Title:</label>
+        <input
+          onChange={(e) => handleChange(e)}
+          value={workObject.positionTitle}
+          name="positionTitle"
+          type="text"
+          className="positionTitle"
+          onClick={(e) => e.target.select()}
+        />
         <label htmlFor="company">Company name: </label>
         <input
           onChange={(e) => handleChange(e)}
@@ -23,6 +32,7 @@ const NewExperienceForm = ({
           name="company"
           type="text"
           className="company"
+          onClick={(e) => e.target.select()}
         />
         <label htmlFor="companyCity">City/State:</label>
         <input
@@ -32,33 +42,29 @@ const NewExperienceForm = ({
           placeholder="Washington, D.C."
           type="text"
           className="companyCity"
+          onClick={(e) => e.target.select()}
         />
         <label htmlFor="fromDate">From:</label>
         <input
           onChange={(e) => handleChange(e)}
           value={workObject.fromDate}
           name="fromDate"
-          placeholder="mm/dd/yyyy"
+          placeholder="MONTH 20XX"
           type="text"
           className="fromDate"
+          onClick={(e) => e.target.select()}
         />
         <label htmlFor="toDate">To:</label>
         <input
           onChange={(e) => handleChange(e)}
           value={workObject.toDate}
           name="toDate"
-          placeholder="mm/dd/yyyy"
+          placeholder="MONTH 20XX"
           type="text"
           className="toDate"
+          onClick={(e) => e.target.select()}
         />
-        <label htmlFor="positionTitle">Position title:</label>
-        <input
-          onChange={(e) => handleChange(e)}
-          value={workObject.positionTitle}
-          name="positionTitle"
-          type="text"
-          className="positionTitle"
-        />
+
         <Responsibilities
           workObject={workObject}
           setWorkObject={setWorkObject}

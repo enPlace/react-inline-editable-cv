@@ -37,6 +37,14 @@ const EditWork = ({
           handleSubmit();
         }}
       >
+        <label htmlFor="positionTitle">Position/Title:</label>
+        <input
+          onChange={(e) => handleChange(e)}
+          value={workObject.positionTitle}
+          name="positionTitle"
+          type="text"
+          className="positionTitle"
+        />
         <label htmlFor="company">Company name: </label>
         <input
           onChange={(e) => handleChange(e)}
@@ -72,14 +80,7 @@ const EditWork = ({
           type="text"
           className="toDate"
         />
-        <label htmlFor="positionTitle">Position title:</label>
-        <input
-          onChange={(e) => handleChange(e)}
-          value={workObject.positionTitle}
-          name="positionTitle"
-          type="text"
-          className="positionTitle"
-        />
+
         <Responsibilities
           workObject={workObject}
           setWorkObject={setWorkObject}
@@ -87,7 +88,7 @@ const EditWork = ({
         ></Responsibilities>
         <div className="formButtons">
           <button
-            type="reset"
+            type="button"
             onClick={() => {
               setIsEditable(false);
             }}
@@ -95,9 +96,10 @@ const EditWork = ({
             Cancel
           </button>
           <button
+            type="button"
             onClick={() => {
-              setIsEditable(false)
-              deleteInfo(userInfo, setUserInfo, setPos, id)
+              setIsEditable(false);
+              deleteInfo(userInfo, setUserInfo, setPos, id);
             }}
           >
             Delete

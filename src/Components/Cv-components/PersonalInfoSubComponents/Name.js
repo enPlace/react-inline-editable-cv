@@ -42,6 +42,7 @@ const Name = ({ isEditable, handleEditChange }) => {
                 id={name.pos}
                 name={name.id}
                 onChange={(e) => handleChange(e)}
+                onClick = {(e)=>e.target.select()}
               />
             </form>
           );

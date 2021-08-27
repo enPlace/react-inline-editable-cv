@@ -15,10 +15,16 @@ const Cv = () => {
   };
   return (
     <div className="cv-body">
+      
       <PersonalInfo
         handleEditChange={handleEditChange}
         isEditable={isEditable}
+        setIsEditable = {setIsEditable}
       ></PersonalInfo>
+      <Skills
+      isEditable={isEditable}
+      setIsEditable={setIsEditable}
+      handleEditChange={handleEditChange}></Skills>
       <WorkExperience
         isEditable={isEditable}
         setIsEditable={setIsEditable}
@@ -29,10 +35,7 @@ const Cv = () => {
         setIsEditable={setIsEditable}
         handleEditChange={handleEditChange}
       ></Education>
-      <Skills
-      isEditable={isEditable}
-      setIsEditable={setIsEditable}
-      handleEditChange={handleEditChange}></Skills>
+      
       
     </div>
   );
