@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/react-inline-editable-cv/static/css/main.6156f0a4.chunk.css",
+    "main.js": "/react-inline-editable-cv/static/js/main.7ac3b7f4.chunk.js",
+    "main.js.map": "/react-inline-editable-cv/static/js/main.7ac3b7f4.chunk.js.map",
+    "runtime-main.js": "/react-inline-editable-cv/static/js/runtime-main.0518c1f5.js",
+    "runtime-main.js.map": "/react-inline-editable-cv/static/js/runtime-main.0518c1f5.js.map",
+    "static/js/2.0cdd3f1e.chunk.js": "/react-inline-editable-cv/static/js/2.0cdd3f1e.chunk.js",
+    "static/js/2.0cdd3f1e.chunk.js.map": "/react-inline-editable-cv/static/js/2.0cdd3f1e.chunk.js.map",
+    "static/js/3.735ac46a.chunk.js": "/react-inline-editable-cv/static/js/3.735ac46a.chunk.js",
+    "static/js/3.735ac46a.chunk.js.map": "/react-inline-editable-cv/static/js/3.735ac46a.chunk.js.map",
+    "index.html": "/react-inline-editable-cv/index.html",
+    "static/css/main.6156f0a4.chunk.css.map": "/react-inline-editable-cv/static/css/main.6156f0a4.chunk.css.map",
+    "static/js/2.0cdd3f1e.chunk.js.LICENSE.txt": "/react-inline-editable-cv/static/js/2.0cdd3f1e.chunk.js.LICENSE.txt",
+    "static/media/email2.b8a16cad.svg": "/react-inline-editable-cv/static/media/email2.b8a16cad.svg",
+    "static/media/github.df941249.svg": "/react-inline-editable-cv/static/media/github.df941249.svg",
+    "static/media/linkedin.7defd339.svg": "/react-inline-editable-cv/static/media/linkedin.7defd339.svg",
+    "static/media/locationIcon.0c0840fc.svg": "/react-inline-editable-cv/static/media/locationIcon.0c0840fc.svg",
+    "static/media/mobile-phone.3fec5e39.svg": "/react-inline-editable-cv/static/media/mobile-phone.3fec5e39.svg",
+    "static/media/resume.d8bafcef.svg": "/react-inline-editable-cv/static/media/resume.d8bafcef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0518c1f5.js",
+    "static/js/2.0cdd3f1e.chunk.js",
+    "static/css/main.6156f0a4.chunk.css",
+    "static/js/main.7ac3b7f4.chunk.js"
+  ]
+}
