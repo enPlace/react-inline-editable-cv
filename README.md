@@ -13,10 +13,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Features and Previews
 - <h3>Edit personal information</h3>
+
+ <img src="./personalInfo.gif" alt="todo-component"/>
 - <h3>Add, edit, and delete skills</h3>
+ <img src="./skills.gif" alt="todo-component"/>
 - <h3>Enter and edit form information</h3>
+ <img src="./form.gif" alt="todo-component"/>
 - <h3>Delete work or education components</h3>
+ <img src="./delete.gif" alt="todo-component"/>
 - <h3>View a formatted preview that is not editable and that removes all components and styling related to editing</h3>
+ <img src="./preview.gif" alt="todo-component"/>
 
 ## Available Scripts
 
