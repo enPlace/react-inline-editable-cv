@@ -258,3 +258,10 @@ code {
   display: flex;
   flex-direction: column;
 }
+.preview *:hover {
+  cursor: text;
+  box-shadow:none;
+}
+.preview button{
+  display: none;
+}

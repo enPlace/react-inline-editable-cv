@@ -2,7 +2,7 @@ import { useState } from "react";
 import NewExperienceForm from "./workExperienceSubComponents/NewExperienceForm";
 import SavedWorkExperience from "./workExperienceSubComponents/SavedWorkExperience";
 
-const WorkExperience = () => {
+const WorkExperience = ({viewStatus}) => {
   const emptyWorkObject = {
     company: "",
     companyCity: "",
@@ -75,7 +75,7 @@ const WorkExperience = () => {
   };
 
   return (
-    <div className="work-experience">
+    <div className={"work-experience " +viewStatus}>
       <h2>WORK EXPERIENCE</h2>
       <SavedWorkExperience
         userInfo={userInfo}
@@ -84,6 +84,7 @@ const WorkExperience = () => {
         setIsEditable={setIsEditable}
         cleanResp={cleanResp}
         setPos={setPos}
+        viewStatus = {viewStatus}
       ></SavedWorkExperience>
       <NewExperienceForm
         isEditable={isEditable}

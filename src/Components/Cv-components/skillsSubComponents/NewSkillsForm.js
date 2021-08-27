@@ -1,18 +1,22 @@
-
-const NewSkillsForm = ({ newSkill, handleChange, handleSubmit, pos, setPos }) => {
-  
-  return (
+const NewSkillsForm = ({
+  viewStatus,
+  newSkill,
+  handleChange,
+  handleSubmit,
+  pos,
+  setPos,
+}) => {
+  return viewStatus !== "edit" ? null : (
     <form
       action=""
       className="newSkill"
       onSubmit={(e) => {
         e.preventDefault();
-        if(newSkill.text === ""){}
-        else{
+        if (newSkill.text === "") {
+        } else {
           handleSubmit();
           setPos(pos + 1);
         }
-
       }}
     >
       <input

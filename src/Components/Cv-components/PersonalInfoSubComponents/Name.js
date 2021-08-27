@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Name = ({ isEditable, handleEditChange }) => {
+const Name = ({ viewStatus, isEditable, handleEditChange }) => {
   const [names, setNames] = useState([
     { text: "First Name", pos: "0", id: "firstName" },
     { text: "Last Name", pos: "1", id: "lastName" },
@@ -20,7 +20,9 @@ const Name = ({ isEditable, handleEditChange }) => {
             <h1
               key={name.id}
               pos={name.pos}
-              onClick={() => handleEditChange(name.id)}
+              onClick={() => {
+                if (viewStatus === "edit") handleEditChange(name.id);
+              }}
             >
               {name.text}
             </h1>
@@ -28,7 +30,7 @@ const Name = ({ isEditable, handleEditChange }) => {
         } else {
           return (
             <form
-              className= "nameForm"
+              className="nameForm"
               action=""
               key={name.id}
               onSubmit={(e) => {
@@ -42,7 +44,7 @@ const Name = ({ isEditable, handleEditChange }) => {
                 id={name.pos}
                 name={name.id}
                 onChange={(e) => handleChange(e)}
-                onClick = {(e)=>e.target.select()}
+                onClick={(e) => e.target.select()}
               />
             </form>
           );

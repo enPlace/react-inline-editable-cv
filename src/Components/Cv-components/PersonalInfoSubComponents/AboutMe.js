@@ -1,5 +1,5 @@
 import { useState } from "react";
-const AboutMe = ({ isEditable, setIsEditable }) => {
+const AboutMe = ({ viewStatus, isEditable, setIsEditable }) => {
   const [about, setAbout] = useState({
     about: "about me",
   });
@@ -11,9 +11,13 @@ const AboutMe = ({ isEditable, setIsEditable }) => {
   };
   return isEditable !== "about" ? (
     <div
-    className = "aboutMe"
-    onClick = {()=>setIsEditable("about")}
-    >{about.about}</div>
+      className="aboutMe"
+      onClick={() => {
+        if (viewStatus === "edit") setIsEditable("about");
+      }}
+    >
+      {about.about}
+    </div>
   ) : (
     <form
       action=""

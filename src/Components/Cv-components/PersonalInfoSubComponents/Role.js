@@ -1,5 +1,5 @@
 import { useState } from "react";
-const Role = ({ isEditable, handleEditChange }) => {
+const Role = ({viewStatus, isEditable, handleEditChange }) => {
   const [role, setRole] = useState({
     role: "Current Role",
     id: "currentRole",
@@ -14,7 +14,9 @@ const Role = ({ isEditable, handleEditChange }) => {
   
 
   return isEditable !== role.id ? (
-    <div onClick={() => handleEditChange(role.id)} className="role">
+    <div onClick={() => {
+      if (viewStatus === "edit") handleEditChange(role.id)
+      }} className="role">
       {role.role}
     </div>
   ) : (

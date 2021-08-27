@@ -4,7 +4,7 @@ import PhoneIcon from "./mobile-phone.svg";
 import EmailIcon from "./email2.svg";
 import LinkedIcon from "./linkedin.svg";
 
-const Contact = ({ handleEditChange, isEditable}) => {
+const Contact = ({ viewStatus, handleEditChange, isEditable}) => {
   const [contactInfo, setContactInfo] = useState([
     { text: "address 1", icon: LocationIcon, pos: 0, id: "address1" },
     { text: "address 2", icon: LocationIcon, pos: 1, id: "address2" },
@@ -29,7 +29,7 @@ const Contact = ({ handleEditChange, isEditable}) => {
             <div key={item.id} className="contactItem">
               <div
                 onClick={() => {
-                  handleEditChange(item.id);
+                  if (viewStatus === "edit") handleEditChange(item.id);
                 }}
                 name={item.id}
                 className="contactItemName"

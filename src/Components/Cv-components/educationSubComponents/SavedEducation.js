@@ -5,6 +5,7 @@ const SavedEducation = ({
   isEditable,
   setIsEditable,
   setPos,
+  viewStatus
 }) => {
   let key = 0;
   return !userInfo ? null : (
@@ -23,7 +24,9 @@ const SavedEducation = ({
           <div
             className="schoolObject"
             key={key}
-            onClick={() => setIsEditable(school.id)}
+            onClick={() => {
+              if (viewStatus === "edit") setIsEditable(school.id);
+            }}
           >
             <h3 className="degree">{school.degree}</h3>
             <div className="schoolInfo">

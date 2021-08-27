@@ -1,6 +1,7 @@
 import EditWork from "./EditWork";
 
 const SavedWorkExperience = ({
+  viewStatus,
   userInfo,
   setUserInfo,
   isEditable,
@@ -24,7 +25,7 @@ const SavedWorkExperience = ({
           <div
             className="companyInfo"
             key={work.id}
-            onClick={() => setIsEditable(work.id)}
+            onClick={() => {if (viewStatus === "edit")setIsEditable(work.id)}}
           >
             <h3 className="companyPositionTitle">{work.positionTitle}</h3>
             <div className="placeOfWork">

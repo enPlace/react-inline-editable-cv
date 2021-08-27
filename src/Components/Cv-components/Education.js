@@ -2,7 +2,7 @@ import { useState } from "react";
 import NewEducationForm from "./educationSubComponents/NewEducationForm";
 import SavedEducation from "./educationSubComponents/SavedEducation";
 
-const Education = () => {
+const Education = ({ viewStatus }) => {
   const emptyFormObject = {
     schoolName: "",
     city: "",
@@ -54,7 +54,7 @@ const Education = () => {
     setIsEditable(false);
   };
   return (
-    <div className="education">
+    <div className={"education " + viewStatus}>
       <h2>Education</h2>
       <SavedEducation
         userInfo={userInfo}
@@ -62,6 +62,7 @@ const Education = () => {
         isEditable={isEditable}
         setIsEditable={setIsEditable}
         setPos={setPos}
+        viewStatus = {viewStatus}
       ></SavedEducation>
       <NewEducationForm
         isEditable={isEditable}
