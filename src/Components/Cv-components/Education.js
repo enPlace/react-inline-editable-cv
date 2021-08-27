@@ -62,7 +62,7 @@ const Education = ({ viewStatus }) => {
         isEditable={isEditable}
         setIsEditable={setIsEditable}
         setPos={setPos}
-        viewStatus = {viewStatus}
+        viewStatus={viewStatus}
       ></SavedEducation>
       <NewEducationForm
         isEditable={isEditable}

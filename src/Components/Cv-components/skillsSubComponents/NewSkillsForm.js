@@ -33,5 +33,4 @@ const NewSkillsForm = ({
     </form>
   );
 };
-
 export default NewSkillsForm;

@@ -27,7 +27,6 @@ const EditWork = ({
     userInfo[id] = workObject;
     setIsEditable(false);
   };
-
   return (
     <div className="work-experience-form">
       <form

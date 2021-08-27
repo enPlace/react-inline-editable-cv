@@ -2,9 +2,9 @@ import { useState } from "react";
 import NewSkillsForm from "./skillsSubComponents/NewSkillsForm";
 import SavedSkills from "./skillsSubComponents/SavedSkills";
 
-const Skills = ({viewStatus}) => {
+const Skills = ({ viewStatus }) => {
   const emptySkill = { text: "", id: "" };
-  const sampleSkill = {text: "Add a skill, or click me to edit", id: "0"}
+  const sampleSkill = { text: "Add a skill, or click me to edit", id: "0" };
   const [userInfo, setUserInfo] = useState([sampleSkill]);
 
   const [newSkill, setNewSkill] = useState(emptySkill);
@@ -36,7 +36,7 @@ const Skills = ({viewStatus}) => {
         isEditable={isEditable}
         setIsEditable={setIsEditable}
         setPos={setPos}
-        viewStatus = {viewStatus}
+        viewStatus={viewStatus}
       ></SavedSkills>
       <NewSkillsForm
         newSkill={newSkill}
@@ -44,7 +44,7 @@ const Skills = ({viewStatus}) => {
         handleSubmit={handleSubmit}
         pos={pos}
         setPos={setPos}
-        viewStatus = {viewStatus}
+        viewStatus={viewStatus}
       ></NewSkillsForm>
     </div>
   );

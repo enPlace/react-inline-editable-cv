@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./Components/Header";
 import TogglePreview from "./Components/TogglePreview";
 import Cv from "./Components/Cv";
-import Icon from "./github.svg"
+import Icon from "./github.svg";
 function App() {
   const [viewStatus, setViewStatus] = useState("edit");
 
@@ -17,9 +17,14 @@ function App() {
         <Cv viewStatus={viewStatus}></Cv>
       </div>
       <footer>
-        <a id = "copyright" href="https://github.com/enPlace/react-inline-editable-cv" rel= "noreferrer" target = "_blank">
-        Copyright © 2021 enPlace
-        <img id = "githubIcon" src={Icon} alt="" />
+        <a
+          id="copyright"
+          href="https://github.com/enPlace/react-inline-editable-cv"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Copyright © 2021 enPlace
+          <img id="githubIcon" src={Icon} alt="" />
         </a>
       </footer>
     </div>

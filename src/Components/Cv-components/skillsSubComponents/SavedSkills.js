@@ -1,5 +1,4 @@
 import EditSkill from "./EditSkill";
-
 const SavedSkills = ({
   viewStatus,
   userInfo,

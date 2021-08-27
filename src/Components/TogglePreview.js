@@ -3,14 +3,14 @@ const TogglePreview = ({ viewStatus, setViewStatus }) => {
     <div className="togglePreview">
       <button
         type="button"
-        className={viewStatus === "edit"?"active":""}
+        className={viewStatus === "edit" ? "active" : ""}
         onClick={() => setViewStatus("edit")}
       >
         Edit
       </button>
       <button
         type="button"
-        className={viewStatus === "preview"?"active":""}
+        className={viewStatus === "preview" ? "active" : ""}
         onClick={() => setViewStatus("preview")}
       >
         Preview

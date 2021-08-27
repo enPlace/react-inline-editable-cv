@@ -25,12 +25,14 @@ const SavedWorkExperience = ({
           <div
             className="companyInfo"
             key={work.id}
-            onClick={() => {if (viewStatus === "edit")setIsEditable(work.id)}}
+            onClick={() => {
+              if (viewStatus === "edit") setIsEditable(work.id);
+            }}
           >
             <h3 className="companyPositionTitle">{work.positionTitle}</h3>
             <div className="placeOfWork">
-            <h4 className="companyName">{work.company}</h4>
-            <p className="companyCity"> - {work.companyCity}</p>
+              <h4 className="companyName">{work.company}</h4>
+              <p className="companyCity"> - {work.companyCity}</p>
             </div>
             <p className="companyDates">
               {work.fromDate} - {work.toDate}

@@ -2,7 +2,7 @@ import { useState } from "react";
 import NewExperienceForm from "./workExperienceSubComponents/NewExperienceForm";
 import SavedWorkExperience from "./workExperienceSubComponents/SavedWorkExperience";
 
-const WorkExperience = ({viewStatus}) => {
+const WorkExperience = ({ viewStatus }) => {
   const emptyWorkObject = {
     company: "",
     companyCity: "",
@@ -22,11 +22,14 @@ const WorkExperience = ({viewStatus}) => {
     fromDate: "MONTH 20XX",
     toDate: "PRESENT",
     responsibilities: [
-      { text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", id: "0" },
+      {
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        id: "0",
+      },
       { text: "Aenean ac interdum nisi. Sed in consequat mi.", id: "1" },
     ],
     id: "0",
-  }
+  };
   const [userInfo, setUserInfo] = useState([sampleWorkObject]);
   const [pos, setPos] = useState(1);
   const [isEditable, setIsEditable] = useState(false);
@@ -37,7 +40,6 @@ const WorkExperience = ({viewStatus}) => {
       setIsEditable(false);
     }
   };
-
 
   const [workObject, setWorkObject] = useState(emptyWorkObject);
 
@@ -75,7 +77,7 @@ const WorkExperience = ({viewStatus}) => {
   };
 
   return (
-    <div className={"work-experience " +viewStatus}>
+    <div className={"work-experience " + viewStatus}>
       <h2>WORK EXPERIENCE</h2>
       <SavedWorkExperience
         userInfo={userInfo}
@@ -84,7 +86,7 @@ const WorkExperience = ({viewStatus}) => {
         setIsEditable={setIsEditable}
         cleanResp={cleanResp}
         setPos={setPos}
-        viewStatus = {viewStatus}
+        viewStatus={viewStatus}
       ></SavedWorkExperience>
       <NewExperienceForm
         isEditable={isEditable}
