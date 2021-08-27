@@ -238,6 +238,9 @@ code {
   display: flex;
   align-items: center;
 }
+.degree{
+  color:teal;
+}
 .schoolCity {
   margin-left: 5px;
   font-size: 15px;
