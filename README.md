@@ -13,7 +13,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Features and Previews
-
+- <h3>Edit personal information</h3>
+- <h3>Add, edit, and delete skills</h3>
+- <h3>Enter and edit form information</h3>
+- <h3>Delete work or education components</h3>
+- <h3>View a formatted preview that is not editable and that removes all components and styling related to editing</h3>
 
 ## Available Scripts
 
