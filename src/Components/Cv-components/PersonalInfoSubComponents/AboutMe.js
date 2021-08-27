@@ -2,7 +2,7 @@ import { useState } from "react";
 const AboutMe = ({ viewStatus, isEditable, setIsEditable }) => {
   const [about, setAbout] = useState({
     about:
-      "About me: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "About me: Click on any text on the cv template to edit, or click a button to add a new block of information about yourself to the document.",
   });
   const handleAboutChange = (e) => {
     setAbout({
