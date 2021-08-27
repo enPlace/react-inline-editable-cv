@@ -1,5 +1,4 @@
 # React Inline-Editable CV Generator
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 I made this CV generator to practice using states, and to practice returning differing components depending on variables that
 the user can ineteract with. 
