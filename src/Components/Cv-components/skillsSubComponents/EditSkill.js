@@ -29,9 +29,6 @@ const EditSkill = ({ userInfo, setUserInfo, setIsEditable, setPos, id }) => {
         onChange={(e) => handleChange(e.target.value)}
       />
       <div className="buttons">
-      <button type="button" onClick={() => setIsEditable(false)}>
-        cancel
-      </button>
       <button
         type="button"
         onClick={() => {
@@ -41,6 +38,11 @@ const EditSkill = ({ userInfo, setUserInfo, setIsEditable, setPos, id }) => {
       >
         del
       </button>
+      
+      <button type="button" onClick={() => setIsEditable(false)}>
+        cancel
+      </button>
+
       <button type="submit">&#10003;</button>
       </div>
     </form>
