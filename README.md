@@ -1,7 +1,7 @@
 # React Inline-Editable CV Generator
 
 I made this CV generator to practice using states, and to practice returning differing components depending on variables that
-the user can ineteract with. 
+with which the user can interact. 
 
 
 <h3 align="left">Languages and Tools:</h3>
