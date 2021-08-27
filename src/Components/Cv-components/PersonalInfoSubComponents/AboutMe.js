@@ -1,7 +1,8 @@
 import { useState } from "react";
 const AboutMe = ({ viewStatus, isEditable, setIsEditable }) => {
   const [about, setAbout] = useState({
-    about: "about me",
+    about:
+      "About me: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   });
   const handleAboutChange = (e) => {
     setAbout({

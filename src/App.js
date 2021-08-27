@@ -9,11 +9,13 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <TogglePreview
-        viewStatus={viewStatus}
-        setViewStatus={setViewStatus}
-      ></TogglePreview>
-      <Cv viewStatus={viewStatus}></Cv>
+      <div className="cvContainer">
+        <TogglePreview
+          viewStatus={viewStatus}
+          setViewStatus={setViewStatus}
+        ></TogglePreview>
+        <Cv viewStatus={viewStatus}></Cv>
+      </div>
     </div>
   );
 }
