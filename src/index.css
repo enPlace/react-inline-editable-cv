@@ -4,7 +4,7 @@ body {
   margin: 0;
   width: 125%;
   height: 125%;
-  transform-origin: top left;
+  transform-origin:top left;
   transform: scale(80%);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -60,6 +60,7 @@ code {
 .togglePreview button.active{
   border-bottom: 3px solid teal;
   background-color: white;
+  
 }
 .togglePreview button:hover{
   cursor: pointer;
@@ -73,6 +74,7 @@ code {
   min-height: 80vh;
   margin: 20px;
   margin-top: 0px;
+ 
 }
 .personal-info {
   border-bottom: 1px solid gray;
@@ -303,4 +305,19 @@ code {
 }
 .education.preview{
   margin-top: -20px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96%;
+  padding: 3px;
+}
+a{
+  display: flex;
+  align-items: center;
+}
+#githubIcon{
+  width: 40px;
+  margin-left: 10px;
 }
