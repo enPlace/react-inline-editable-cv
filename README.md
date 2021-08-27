@@ -1,8 +1,10 @@
 # React Inline-Editable CV Generator
 
+<a href="https://enplace.github.io/react-inline-editable-cv/" target="_blank"> https://enplace.github.io/react-inline-editable-cv/ </a>
+
 I made this CV generator to practice using states, and to practice returning differing components depending on variables that
 with which the user can interact. 
-<a href="https://enplace.github.io/react-inline-editable-cv/" target="_blank"> https://enplace.github.io/react-inline-editable-cv/ </a>
+
 
 
 <h3 align="left">Languages and Tools:</h3>
